@@ -283,6 +283,11 @@
 #define MCP_8MHz_50kBPS_CFG2 (0xE5)    /* Enabled SAM bit     */
 #define MCP_8MHz_50kBPS_CFG3 (0x83)    /* Sample point at 75% */
 
+// 47.619 kBPS speed for SAAB I-BUS @ 8 mHz osc
+#define MCP_8MHz_47kBPS_CFG1 (0x83)
+#define MCP_8MHz_47kBPS_CFG2 (0xBE)
+#define MCP_8MHz_47kBPS_CFG3 (0x04)
+
 #define MCP_8MHz_40kBPS_CFG1 (0x84)    /* Increased SJW       */
 #define MCP_8MHz_40kBPS_CFG2 (0xF6)    /* Enabled SAM bit     */
 #define MCP_8MHz_40kBPS_CFG3 (0x84)    /* Sample point at 75% */
@@ -360,6 +365,12 @@
 #define MCP_16MHz_50kBPS_CFG1 (0x47)      /* Increased SJW       */
 #define MCP_16MHz_50kBPS_CFG2 (0xF6)
 #define MCP_16MHz_50kBPS_CFG3 (0x84)      /* Sample point at 75% */
+
+// SAAB 47.619 kBPS I-BUS 
+// Taken from https://github.com/mbaum0/CAN_BUS_Shield/blob/master/mcp_can_dfs.h
+#define MCP_16MHz_47kBPS_CFG1 (0x06)
+#define MCP_16MHz_47kBPS_CFG2 (0xBE)
+#define MCP_16Mhz_47kBPS_CFG3 (0x07)
 
 #define MCP_16MHz_40kBPS_CFG1 (0x49)      /* Increased SJW       */
 #define MCP_16MHz_40kBPS_CFG2 (0xF6)
@@ -482,6 +493,8 @@
 #define CAN_250KBPS  12
 #define CAN_500KBPS  13
 #define CAN_1000KBPS 14
+
+#define CAN_47KBPS 15 // SAAB I-BUS
 
 #define CAN_OK             (0)
 #define CAN_FAILINIT       (1)

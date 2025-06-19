@@ -274,6 +274,12 @@ INT8U MCP_CAN::mcp2515_configRate(const INT8U canSpeed, const INT8U canClock)
             cfg3 = MCP_8MHz_40kBPS_CFG3;
             break;
 
+            case (CAN_47KBPS):                                              //  Saab's 47 kbps I-BUS
+            cfg1 = MCP_8MHz_47kBPS_CFG1;
+            cfg2 = MCP_8MHz_47kBPS_CFG2;
+            cfg3 = MCP_8MHz_47kBPS_CFG3;
+            break;
+
             case (CAN_50KBPS):                                              //  50Kbps
             cfg1 = MCP_8MHz_50kBPS_CFG1;
             cfg2 = MCP_8MHz_50kBPS_CFG2;
@@ -394,6 +400,12 @@ INT8U MCP_CAN::mcp2515_configRate(const INT8U canSpeed, const INT8U canClock)
             cfg1 = MCP_16MHz_40kBPS_CFG1;
             cfg2 = MCP_16MHz_40kBPS_CFG2;
             cfg3 = MCP_16MHz_40kBPS_CFG3;
+            break;
+
+            case (CAN_47KBPS):                                              //  Saab's 47 kbps I-BUS
+            cfg1 = MCP_16MHz_47kBPS_CFG1;
+            cfg2 = MCP_16MHz_47kBPS_CFG2;
+            cfg3 = MCP_16Mhz_47kBPS_CFG3;
             break;
 
             case (CAN_50KBPS):                                              //  50Kbps
